@@ -1,0 +1,26 @@
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/adminstyle.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="lightgrey">
+
+<h2 align="center">Student Academic Management System</h2>
+
+<a href="{% url 'adminhome' %}">Home</a> &nbsp;&nbsp;&nbsp;
+<a href="">Change password</a> &nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminstudent'%}">Student</a> &nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminfaculty'%}">Faculty</a>  &nbsp;&nbsp;&nbsp;
+<a href="{% url 'admincourse'%}">Course</a> &nbsp;&nbsp;&nbsp;
+<a href="{% url 'adminlogout' %}">Logout</a> &nbsp;&nbsp;&nbsp;
+
+{% block 'body' %}
+<p>Admin Home</p>
+{% endblock%}
+</body>
+</html>

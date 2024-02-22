@@ -1,0 +1,68 @@
+{% extends 'AdminHome.html'%}
+
+{% block 'body'%}
+
+<h4 align="center" style="color : red">{{ message }}</h4>
+<h3 align="center"><b>Add Course</b></h3>
+<br/>
+<div>
+    <form method="post" action="{% url 'insertcourse'%}" >
+        {% csrf_token %}
+     <table align="center" width="40%" height="40%">
+        <tr>
+            <td>  <label>Department</label></td>
+            <td>
+                <select name="dept"  required>
+                    <option value="">--select--</option>
+                    <option value="CSE(Honours)"> CSE(Honours)</option>
+                    <option value="CSE(Regular)">CSE(Regular)</option>
+                    <option value="CS&IT">CS&IT</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Academicyear</label></td>
+            <td>
+                <select name="ay"  required>
+                    <option value="">--select--</option>
+                    <option value="2022-23">2022-23</option>
+                    <option value="2023-24">2023-24</option>
+                    <option value="2024-25">2024-25</option>
+                </select>
+            </td>
+        </tr>
+
+         <tr>
+             <td> <label>Semester </label></td>
+             <td>
+                 <select name="sem" required >
+                     <option value=""> --select--</option>
+                     <option value="ODD">ODD</option>
+                     <option value="EVEN"> EVEN</option>
+                 </select>
+             </td>
+         </tr>
+
+         <tr>
+             <td> <label>Year</label></td>
+             <td> <input type="number" min="1" max="4" name="year" required></td>
+         </tr>
+
+         <tr>
+             <td> <label>Coursecode</label></td>
+             <td> <input type="text"  name="ccode" required></td>
+         </tr>
+
+         <tr>
+             <td> <label>CourseTitle</label></td>
+             <td> <input type="text"  name="ctitle" required></td>
+         </tr>
+
+        <tr>
+            <td> <input  type="submit" value="Add" class="button-24"/></td>
+            <td> <input type="reset" value="Clear" class="button-24"/></td>
+        </tr>
+    </table>
+</form>
+    </div>
+{% endblock %}

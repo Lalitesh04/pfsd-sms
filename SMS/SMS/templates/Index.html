@@ -1,0 +1,21 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS</title>
+    <link type="text/css" rel="stylesheet" href="{%  static 'css/style.css'%}">
+</head>
+<body >
+    <h2 align="center">Student Academic Management System</h2>
+
+    <a href="{% url 'home' %}">Home</a>  &nbsp;&nbsp;&nbsp;
+    <a href="{% url 'about' %}">About Project</a>&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'login' %}">Login</a>&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'contact' %}">Contact Us</a> &nbsp;&nbsp;&nbsp;
+
+    <br/><br/><br/>
+    {% block b1 %}
+        <h1>Home page</h1>
+    {% endblock %}
+</body>
+</html>
